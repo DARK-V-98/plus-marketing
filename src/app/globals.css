@@ -10,7 +10,7 @@
     --card-foreground: 224 71.4% 4.1%;
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;
-    --primary: 240 100% 60%;
+    --primary: 270 90% 65%;
     --primary-foreground: 0 0% 100%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 224 71.4% 4.1%;
@@ -22,7 +22,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 240 100% 60%;
+    --ring: 270 90% 70%;
     --radius: 0.5rem;
   }
   .dark {
@@ -55,7 +55,10 @@
   body {
     @apply text-foreground;
     background-color: hsl(var(--background));
-    background-image: radial-gradient(ellipse 50% 50% at 50% -20%, hsla(270, 90%, 55%, 0.2), transparent);
+    background-image: url('/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
   }
 }
