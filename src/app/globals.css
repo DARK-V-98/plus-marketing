@@ -32,7 +32,7 @@
     --card-foreground: 210 20% 98%;
     --popover: 224 71% 4%;
     --popover-foreground: 210 20% 98%;
-    --primary: 230 90% 65%;
+    --primary: 270 90% 65%;
     --primary-foreground: 210 20% 98%;
     --secondary: 215 28% 17%;
     --secondary-foreground: 210 20% 98%;
@@ -44,7 +44,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 215 28% 17%;
     --input: 215 28% 17%;
-    --ring: 230 90% 70%;
+    --ring: 270 90% 70%;
   }
 }
 
@@ -55,7 +55,7 @@
   body {
     @apply text-foreground;
     background-color: hsl(var(--background));
-    background-image: radial-gradient(ellipse 50% 50% at 50% -20%, hsla(230, 90%, 55%, 0.2), transparent);
+    background-image: radial-gradient(ellipse 50% 50% at 50% -20%, hsla(270, 90%, 55%, 0.2), transparent);
     background-attachment: fixed;
   }
 }
