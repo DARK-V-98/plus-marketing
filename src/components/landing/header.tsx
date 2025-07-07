@@ -34,7 +34,7 @@ export function Header() {
           <nav className="hidden items-center gap-6 lg:flex">
             {navLinks.map((link) => (
               <Link
-                key={link.href}
+                key={link.label}
                 href={link.href}
                 className="flex items-center gap-2 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
                 prefetch={false}
@@ -71,7 +71,7 @@ export function Header() {
               <div className="grid gap-2 py-6">
                 {navLinks.map((link) => (
                   <Link
-                    key={link.href}
+                    key={link.label}
                     href={link.href}
                     className="flex w-full items-center py-2 text-lg font-semibold"
                     prefetch={false}
