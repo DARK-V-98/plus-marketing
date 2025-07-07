@@ -1,50 +1,46 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Megaphone, PenTool } from "lucide-react";
+import { ShieldCheck, HardDriveUpload, Siren } from "lucide-react";
 
 export function Services() {
-  const services = [
+  const features = [
     {
-      icon: <Megaphone className="h-10 w-10 text-primary" />,
-      title: "Digital Marketing",
-      description: "From SEO and PPC to social media and content marketing, we drive results that matter. Our data-driven strategies are designed to boost your visibility and grow your business online.",
-      tags: ["SEO & SEM", "Social Media", "Content Marketing", "Email Campaigns"],
+      icon: <ShieldCheck className="h-8 w-8 text-primary" />,
+      title: "Reliable protection",
+      description: "We manage your network traffic, keeping your experience smooth.",
     },
     {
-      icon: <PenTool className="h-10 w-10 text-primary" />,
-      title: "Graphic Design",
-      description: "We create compelling visual identities and marketing materials that tell your story. Our design services include branding, web design, and print materials that captivate and convert.",
-      tags: ["Branding", "UI/UX Design", "Print Design", "Illustrations"],
+      icon: <HardDriveUpload className="h-8 w-8 text-primary" />,
+      title: "Easy to set up",
+      description: "Your team's data is secured and encrypted in transit.",
+    },
+    {
+      icon: <Siren className="h-8 w-8 text-primary" />,
+      title: "Virus protection",
+      description: "All web traffic is intelligently screened for malware and spyware.",
     },
   ];
 
   return (
-    <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+    <section id="services" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What We Do Best</h2>
-            <p className="max-w-[900px] text-foreground/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              We offer a complete suite of services to help your brand shine in the digital world.
+            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm uppercase">Universal Solution</div>
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Why Plus Marketing?</h2>
+            <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Plus Marketing is the first and only easy to use cloud firewall for remote teams.
             </p>
           </div>
         </div>
-        <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:max-w-none lg:grid-cols-2 mt-12">
-          {services.map((service) => (
-            <Card key={service.title} className="transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-              <CardHeader className="flex flex-row items-center gap-4">
-                {service.icon}
-                <div className="grid gap-1">
-                  <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
-                </div>
+        <div className="mx-auto mt-12 grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3">
+          {features.map((feature) => (
+            <Card key={feature.title} className="bg-white/5 border-white/10 transform transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:shadow-xl text-left p-4">
+              <CardHeader className="p-2">
+                  {feature.icon}
               </CardHeader>
-              <CardContent>
-                <CardDescription>{service.description}</CardDescription>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {service.tags.map(tag => (
-                    <div key={tag} className="text-xs font-medium bg-muted text-muted-foreground rounded-full px-3 py-1">{tag}</div>
-                  ))}
-                </div>
+              <CardContent className="grid gap-2 p-2">
+                  <CardTitle className="font-headline text-xl">{feature.title}</CardTitle>
+                <CardDescription className="text-foreground/60">{feature.description}</CardDescription>
               </CardContent>
             </Card>
           ))}

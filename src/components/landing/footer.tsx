@@ -1,46 +1,95 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Twitter, Linkedin, Instagram } from "lucide-react";
-import { PlusIcon } from "./icons";
+import { Twitter, Linkedin, Instagram, Github, Facebook } from "lucide-react";
+import { ShieldIcon } from "./icons";
 
 export function Footer() {
   const year = new Date().getFullYear();
 
+  const links = {
+    Product: [
+      { href: "#", label: "Features" },
+      { href: "#", label: "Pricing" },
+      { href: "#", label: "Integrations" },
+      { href: "#", label: "API" },
+    ],
+    Company: [
+      { href: "#", label: "About Us" },
+      { href: "#", label: "Careers" },
+      { href: "#", label: "Blog" },
+      { href: "#", label: "Contact" },
+    ],
+    Resources: [
+      { href: "#", label: "Documentation" },
+      { href: "#", label: "Support" },
+      { href: "#", label: "Case Studies" },
+      { href: "#", label: "Community" },
+    ],
+    Legal: [
+      { href: "#", label: "Privacy Policy" },
+      { href: "#", label: "Terms of Service" },
+      { href: "#", label: "Cookie Policy" },
+    ],
+  };
+
+  const socialLinks = [
+    { href: "#", icon: Twitter, label: "Twitter" },
+    { href: "#", icon: Facebook, label: "Facebook" },
+    { href: "#", icon: Linkedin, label: "LinkedIn" },
+    { href: "#", icon: Instagram, label: "Instagram" },
+    { href: "#", icon: Github, label: "GitHub" },
+  ];
+
   return (
-    <footer className="w-full bg-secondary py-8">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-6 px-4 md:flex-row md:px-6">
-        <div className="flex items-center gap-2">
-           <Link
-          href="#"
-          className="flex items-center gap-2 transition-transform hover:scale-105"
-          prefetch={false}
-        >
-          <PlusIcon className="h-6 w-6 text-primary" />
-          <span className="font-headline text-lg font-semibold text-foreground">
-            Plus Marketing
-          </span>
-        </Link>
+    <footer id="contact" className="w-full border-t border-white/10 bg-background/30 py-12">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <Link
+              href="#"
+              className="mb-4 flex items-center gap-2"
+              prefetch={false}
+            >
+              <ShieldIcon className="h-7 w-7 text-primary" />
+              <span className="font-headline text-xl font-bold text-foreground">
+                Plus Marketing
+              </span>
+            </Link>
+            <p className="max-w-xs text-foreground/60">
+              The first cloud-firewall, built for WFH.
+            </p>
+          </div>
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {Object.entries(links).map(([title, linkList]) => (
+                <div key={title} className="grid gap-2">
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground/80">{title}</h3>
+                    <ul className="grid gap-2">
+                    {linkList.map(link => (
+                        <li key={link.label}>
+                            <Link href={link.href} className="text-sm text-foreground/60 hover:text-foreground">
+                                {link.label}
+                            </Link>
+                        </li>
+                    ))}
+                    </ul>
+                </div>
+            ))}
+          </div>
         </div>
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" size="icon" asChild>
-            <Link href="#" aria-label="Twitter">
-              <Twitter className="h-5 w-5" />
-            </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <Link href="#" aria-label="LinkedIn">
-              <Linkedin className="h-5 w-5" />
-            </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <Link href="#" aria-label="Instagram">
-              <Instagram className="h-5 w-5" />
-            </Link>
-          </Button>
+        <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row">
+          <p className="text-sm text-muted-foreground">
+            © {year} Plus Marketing. All rights reserved.
+          </p>
+          <div className="flex items-center gap-2">
+            {socialLinks.map(social => (
+                <Button key={social.label} variant="ghost" size="icon" asChild>
+                    <Link href={social.href} aria-label={social.label}>
+                        <social.icon className="h-5 w-5 text-foreground/60 hover:text-foreground" />
+                    </Link>
+                </Button>
+            ))}
+          </div>
         </div>
-        <p className="text-sm text-muted-foreground">
-          © {year} Plus Marketing. All rights reserved.
-        </p>
       </div>
     </footer>
   );

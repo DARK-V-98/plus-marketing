@@ -3,53 +3,67 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
-import { PlusIcon } from "./icons";
+import { Menu, User } from "lucide-react";
+import { ShieldIcon } from "./icons";
 
 export function Header() {
   const navLinks = [
-    { href: "#services", label: "Services" },
-    { href: "#portfolio", label: "Portfolio" },
+    { href: "#", label: "Product" },
+    { href: "#", label: "About" },
+    { href: "#", label: "Business", pro: true },
+    { href: "#portfolio", label: "How it works" },
     { href: "#blog", label: "Blog" },
+    { href: "#", label: "FAQ" },
     { href: "#contact", label: "Contact" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm">
-      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
-        <Link
-          href="#"
-          className="flex items-center gap-2 transition-transform hover:scale-105"
-          prefetch={false}
-        >
-          <PlusIcon className="h-6 w-6 text-primary" />
-          <span className="font-headline text-lg font-semibold text-foreground">
-            Plus Marketing
-          </span>
-        </Link>
-        <nav className="hidden items-center gap-6 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
-              prefetch={false}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <div className="flex items-center gap-4">
-          <Sheet>
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background/30 backdrop-blur-lg">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
+        <div className="flex items-center gap-8">
+          <Link
+            href="#"
+            className="flex items-center gap-2"
+            prefetch={false}
+          >
+            <ShieldIcon className="h-7 w-7 text-primary" />
+            <span className="font-headline text-xl font-bold text-foreground">
+              Plus Marketing
+            </span>
+          </Link>
+          <nav className="hidden items-center gap-6 lg:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="flex items-center gap-2 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+                prefetch={false}
+              >
+                {link.label}
+                {link.pro && <span className="h-2 w-2 rounded-full bg-green-400"></span>}
+              </Link>
+            ))}
+          </nav>
+        </div>
+        
+        <div className="hidden items-center gap-4 md:flex">
+            <Button>Pricing</Button>
+            <Button variant="ghost" size="icon">
+                <User className="h-5 w-5" />
+                <span className="sr-only">User Profile</span>
+            </Button>
+        </div>
+
+        <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden">
+              <Button variant="outline" size="icon" className="lg:hidden">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" className="bg-background/80 backdrop-blur-lg">
               <Link href="#" className="mr-6 flex items-center" prefetch={false}>
-                <PlusIcon className="h-6 w-6 text-primary" />
+                <ShieldIcon className="h-6 w-6 text-primary" />
                 <span className="ml-2 font-headline text-lg font-semibold">
                   Plus Marketing
                 </span>
@@ -63,12 +77,12 @@ export function Header() {
                     prefetch={false}
                   >
                     {link.label}
+                    {link.pro && <span className="ml-2 h-2 w-2 rounded-full bg-green-400"></span>}
                   </Link>
                 ))}
               </div>
             </SheetContent>
           </Sheet>
-        </div>
       </div>
     </header>
   );

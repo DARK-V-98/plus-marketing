@@ -11,9 +11,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Plus Marketing | Digital & Design Services",
+  title: "Plus Marketing | The first cloud-firewall, built for WFH",
   description:
-    "Elevate your brand with Plus Marketing's expert digital marketing and graphic design services. We build modern, animated, and effective online presences.",
+    "Plus Marketing is simple and easy to use, no IT department required. Your team is automatically secured by our intelligent security system.",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
        <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
