@@ -9,9 +9,7 @@ import { ShieldIcon } from "./icons";
 export function Header() {
   const navLinks = [
     { href: "#services", label: "Services" },
-    { href: "#portfolio", label: "Our Work" },
     { href: "#testimonials", label: "Testimonials" },
-    { href: "#clients", label: "Clients" },
     { href: "#contact", label: "Contact" },
   ];
 

@@ -30,16 +30,6 @@ export function Hero() {
                   Get Started
                 </Link>
               </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-white/20 hover:bg-white/10 transition-transform hover:scale-105"
-              >
-                <Link href="#portfolio" prefetch={false}>
-                  Our Work
-                </Link>
-              </Button>
             </div>
           </div>
           <div className="flex items-center justify-center">
