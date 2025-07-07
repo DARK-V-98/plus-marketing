@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, User } from "lucide-react";
-import { ShieldIcon } from "./icons";
+import Image from "next/image";
 
 export function Header() {
   const navLinks = [
@@ -23,7 +23,13 @@ export function Header() {
             className="flex items-center gap-2"
             prefetch={false}
           >
-            <ShieldIcon className="h-7 w-7 text-primary" />
+            <Image
+              src="/logo1.jpeg"
+              width={40}
+              height={40}
+              alt="Plus Marketing Logo"
+              className="rounded-full"
+            />
             <span className="font-headline text-xl font-bold text-foreground">
               Plus Marketing
             </span>
@@ -61,7 +67,13 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-background/80 backdrop-blur-lg">
               <Link href="#" className="mr-6 flex items-center" prefetch={false}>
-                <ShieldIcon className="h-6 w-6 text-primary" />
+                <Image
+                  src="/logo1.jpeg"
+                  width={32}
+                  height={32}
+                  alt="Plus Marketing Logo"
+                  className="rounded-full"
+                />
                 <span className="ml-2 font-headline text-lg font-semibold">
                   Plus Marketing
                 </span>
