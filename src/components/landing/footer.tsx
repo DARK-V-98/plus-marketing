@@ -7,11 +7,11 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   const links = {
-    Product: [
-      { href: "#services", label: "Services" },
-      { href: "#portfolio", label: "Our Work" },
-      { href: "#", label: "Pricing" },
-      { href: "#", label: "Integrations" },
+    Services: [
+      { href: "#services", label: "Brand Identity" },
+      { href: "#services", label: "Digital Marketing" },
+      { href: "#services", label: "Web Design & Dev" },
+      { href: "#", label: "Content Strategy" },
     ],
     Company: [
       { href: "#", label: "About Us" },
@@ -19,11 +19,10 @@ export function Footer() {
       { href: "#clients", label: "Blog" },
       { href: "#contact", label: "Contact" },
     ],
-    Resources: [
-      { href: "#", label: "Documentation" },
-      { href: "#", label: "Support" },
+    Work: [
+      { href: "#portfolio", label: "Our Work" },
+      { href: "#testimonials", label: "Testimonials" },
       { href: "#", label: "Case Studies" },
-      { href: "#", label: "Community" },
     ],
     Legal: [
       { href: "#", label: "Privacy Policy" },
