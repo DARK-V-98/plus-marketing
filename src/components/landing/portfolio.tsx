@@ -7,36 +7,36 @@ export function Portfolio() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm uppercase">How it works</div>
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm uppercase">Our Process</div>
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
-                Simple, Secure, Seamless.
+                From Vision to Victory.
               </h2>
               <p className="max-w-[600px] text-foreground/70 md:text-lg">
-                Our cloud firewall routes all your team's traffic through a single, secure point. We inspect for threats, block malware, and ensure all data is encrypted, keeping your remote workforce safe.
+                We follow a proven, collaborative process to ensure every project is a success. Your vision is our guide, and your success is our mission.
               </p>
             </div>
             <ul className="grid gap-4">
               <li>
                 <div className="grid gap-1">
-                  <h3 className="text-lg font-bold">Connect Devices</h3>
+                  <h3 className="text-lg font-bold">Discovery & Strategy</h3>
                   <p className="text-foreground/60">
-                    Easily enroll any device from laptops to smartphones.
+                    We start by understanding your goals and audience to build a roadmap for success.
                   </p>
                 </div>
               </li>
               <li>
                 <div className="grid gap-1">
-                  <h3 className="text-lg font-bold">Traffic Secured</h3>
+                  <h3 className="text-lg font-bold">Design & Creation</h3>
                   <p className="text-foreground/60">
-                    All traffic is tunneled through our intelligent cloud.
+                    Our creative team brings ideas to life with stunning visuals and compelling content.
                   </p>
                 </div>
               </li>
               <li>
                 <div className="grid gap-1">
-                  <h3 className="text-lg font-bold">Threats Blocked</h3>
+                  <h3 className="text-lg font-bold">Launch & Growth</h3>
                   <p className="text-foreground/60">
-                    Malicious content is blocked before it reaches your team.
+                    We launch, monitor, and optimize to ensure your brand achieves maximum impact and growth.
                   </p>
                 </div>
               </li>
@@ -47,7 +47,7 @@ export function Portfolio() {
             width="550"
             height="550"
             alt="How it works diagram"
-            data-ai-hint="network security diagram"
+            data-ai-hint="creative process flowchart"
             className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
           />
         </div>

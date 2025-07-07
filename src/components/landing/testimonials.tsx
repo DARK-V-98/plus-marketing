@@ -7,7 +7,7 @@ export function Testimonials() {
     {
       name: "Sarah L.",
       handle: "@sarah_innovates",
-      quote: "Plus Marketing transformed our remote security. It's so simple, yet powerful. We had it running for our entire team in less than an hour. A must-have for any WFH setup.",
+      quote: "Plus Marketing completely revitalized our brand. The new design is stunning and our engagement has skyrocketed. Truly a game-changing partnership.",
       avatar: "SL",
       image: "https://placehold.co/100x100.png",
       aiHint: "professional woman"
@@ -15,7 +15,7 @@ export function Testimonials() {
     {
       name: "Michael B.",
       handle: "@mike_builds",
-      quote: "As a non-technical founder, network security was a major worry. Plus Marketing took that completely off my plate. Their support is top-notch too. Highly recommended.",
+      quote: "As a startup founder, I needed a team that could handle everything from branding to our go-to-market strategy. Plus Marketing delivered beyond my expectations.",
       avatar: "MB",
       image: "https://placehold.co/100x100.png",
       aiHint: "smiling man"
@@ -23,7 +23,7 @@ export function Testimonials() {
     {
       name: "Jessica P.",
       handle: "@jess_secures",
-      quote: "The peace of mind Plus Marketing provides is invaluable. We can see all traffic, block threats, and manage policies from a single dashboard. It's the perfect WFH firewall.",
+      quote: "The website they built for us is not only beautiful but also incredibly effective at converting visitors. Our online sales have never been better. Highly recommend!",
       avatar: "JP",
       image: "https://placehold.co/100x100.png",
       aiHint: "woman outdoors"
@@ -35,9 +35,9 @@ export function Testimonials() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">They Trust Plus Marketing</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
             <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Don't just take our word for it. Here's what our users have to say.
+              Don't just take our word for it. Here's what our partners have to say.
             </p>
           </div>
         </div>

@@ -8,12 +8,10 @@ import { ShieldIcon } from "./icons";
 
 export function Header() {
   const navLinks = [
-    { href: "#", label: "Product" },
-    { href: "#", label: "About" },
-    { href: "#", label: "Business", pro: true },
-    { href: "#portfolio", label: "How it works" },
-    { href: "#blog", label: "Blog" },
-    { href: "#", label: "FAQ" },
+    { href: "#services", label: "Services" },
+    { href: "#portfolio", label: "Our Work" },
+    { href: "#testimonials", label: "Testimonials" },
+    { href: "#clients", label: "Clients" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -40,14 +38,15 @@ export function Header() {
                 prefetch={false}
               >
                 {link.label}
-                {link.pro && <span className="h-2 w-2 rounded-full bg-green-400"></span>}
               </Link>
             ))}
           </nav>
         </div>
         
         <div className="hidden items-center gap-4 md:flex">
-            <Button>Pricing</Button>
+            <Button asChild>
+                <Link href="#contact">Get a Quote</Link>
+            </Button>
             <Button variant="ghost" size="icon">
                 <User className="h-5 w-5" />
                 <span className="sr-only">User Profile</span>
@@ -77,7 +76,6 @@ export function Header() {
                     prefetch={false}
                   >
                     {link.label}
-                    {link.pro && <span className="ml-2 h-2 w-2 rounded-full bg-green-400"></span>}
                   </Link>
                 ))}
               </div>

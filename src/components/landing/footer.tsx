@@ -8,16 +8,16 @@ export function Footer() {
 
   const links = {
     Product: [
-      { href: "#", label: "Features" },
+      { href: "#services", label: "Services" },
+      { href: "#portfolio", label: "Our Work" },
       { href: "#", label: "Pricing" },
       { href: "#", label: "Integrations" },
-      { href: "#", label: "API" },
     ],
     Company: [
       { href: "#", label: "About Us" },
       { href: "#", label: "Careers" },
-      { href: "#", label: "Blog" },
-      { href: "#", label: "Contact" },
+      { href: "#clients", label: "Blog" },
+      { href: "#contact", label: "Contact" },
     ],
     Resources: [
       { href: "#", label: "Documentation" },
@@ -41,7 +41,7 @@ export function Footer() {
   ];
 
   return (
-    <footer id="contact" className="w-full border-t border-white/10 bg-background/30 py-12">
+    <footer id="footer" className="w-full border-t border-white/10 bg-background/30 py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -56,7 +56,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="max-w-xs text-foreground/60">
-              The first cloud-firewall, built for WFH.
+              Creative marketing and design solutions to help your brand grow.
             </p>
           </div>
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">

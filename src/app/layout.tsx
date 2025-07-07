@@ -11,9 +11,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Plus Marketing | The first cloud-firewall, built for WFH",
+  title: "Plus Marketing | Creative Marketing & Design Solutions",
   description:
-    "Plus Marketing is simple and easy to use, no IT department required. Your team is automatically secured by our intelligent security system.",
+    "Plus Marketing helps brands grow with creative marketing strategies and stunning design. We build memorable experiences that drive results.",
 };
 
 export default function RootLayout({

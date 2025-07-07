@@ -9,16 +9,15 @@ export function Hero() {
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col justify-center space-y-6">
             <div className="space-y-4">
-              <p className="font-bold uppercase tracking-wider text-primary">Join the Revolution</p>
+              <p className="font-bold uppercase tracking-wider text-primary">Creative Digital Agency</p>
               <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl/none">
-                Plus Marketing
+                We Build Brands That Stand Out.
               </h1>
               <h2 className="text-2xl font-medium text-foreground/80 sm:text-3xl">
-                The first cloud-firewall, built for WFH.
+                Stunning Design & Marketing That Drives Results.
               </h2>
               <p className="max-w-[600px] text-foreground/70 md:text-lg">
-                Plus Marketing is simple and easy to use, no IT department required. 
-                Your team is automatically secured by our intelligent security system.
+                We blend creativity with strategy to build unforgettable brand experiences. From concept to campaign, we're your partners in growth.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -28,7 +27,7 @@ export function Hero() {
                 className="transition-transform hover:scale-105"
               >
                 <Link href="#contact" prefetch={false}>
-                  Sign Up Now
+                  Get Started
                 </Link>
               </Button>
               <Button
@@ -37,8 +36,8 @@ export function Hero() {
                 size="lg"
                 className="border-white/20 hover:bg-white/10 transition-transform hover:scale-105"
               >
-                <Link href="#" prefetch={false}>
-                  Read More
+                <Link href="#portfolio" prefetch={false}>
+                  Our Work
                 </Link>
               </Button>
             </div>
@@ -49,7 +48,7 @@ export function Hero() {
               width="600"
               height="500"
               alt="Hero Image"
-              data-ai-hint="3d security firewall illustration"
+              data-ai-hint="abstract design marketing"
               className="mx-auto overflow-hidden rounded-xl object-contain"
             />
           </div>

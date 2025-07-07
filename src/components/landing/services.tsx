@@ -1,22 +1,22 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { ShieldCheck, HardDriveUpload, Siren } from "lucide-react";
+import { PenTool, Megaphone, LayoutTemplate } from "lucide-react";
 
 export function Services() {
   const features = [
     {
-      icon: <ShieldCheck className="h-8 w-8 text-primary" />,
-      title: "Reliable protection",
-      description: "We manage your network traffic, keeping your experience smooth.",
+      icon: <PenTool className="h-8 w-8 text-primary" />,
+      title: "Brand Identity",
+      description: "Crafting unique visual identities that tell your brand's story and resonate with your audience.",
     },
     {
-      icon: <HardDriveUpload className="h-8 w-8 text-primary" />,
-      title: "Easy to set up",
-      description: "Your team's data is secured and encrypted in transit.",
+      icon: <Megaphone className="h-8 w-8 text-primary" />,
+      title: "Digital Marketing",
+      description: "Engaging your audience through targeted campaigns across all digital channels.",
     },
     {
-      icon: <Siren className="h-8 w-8 text-primary" />,
-      title: "Virus protection",
-      description: "All web traffic is intelligently screened for malware and spyware.",
+      icon: <LayoutTemplate className="h-8 w-8 text-primary" />,
+      title: "Web Design & Dev",
+      description: "Building beautiful, responsive, and high-performing websites that convert.",
     },
   ];
 
@@ -25,10 +25,10 @@ export function Services() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm uppercase">Universal Solution</div>
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Why Plus Marketing?</h2>
+            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm uppercase">Our Services</div>
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What We Do</h2>
             <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Plus Marketing is the first and only easy to use cloud firewall for remote teams.
+              We offer a complete suite of marketing and design services to help your business thrive.
             </p>
           </div>
         </div>
