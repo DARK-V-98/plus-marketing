@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Mountain } from "lucide-react";
+import { Menu } from "lucide-react";
 import { PlusIcon } from "./icons";
 
 export function Header() {
@@ -40,12 +40,6 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          <Button
-            asChild
-            className="hidden md:inline-flex transition-transform hover:scale-105"
-          >
-            <Link href="#optimizer">Optimize Brief</Link>
-          </Button>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
@@ -71,9 +65,6 @@ export function Header() {
                     {link.label}
                   </Link>
                 ))}
-                <Button asChild className="mt-4">
-                  <Link href="#optimizer">Optimize Brief</Link>
-                </Button>
               </div>
             </SheetContent>
           </Sheet>
