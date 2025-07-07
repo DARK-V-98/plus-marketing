@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: hsl(var(--background));
-  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(240, 30%, 25%), hsl(var(--background)));
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -59,6 +53,9 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: hsl(var(--background));
+    background-image: radial-gradient(ellipse 50% 50% at 50% -20%, hsla(230, 90%, 55%, 0.2), transparent);
+    background-attachment: fixed;
   }
 }
