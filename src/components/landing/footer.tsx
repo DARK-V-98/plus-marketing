@@ -4,30 +4,16 @@ import { Twitter, Linkedin, Instagram, Github, Facebook } from "lucide-react";
 import { ShieldIcon } from "./icons";
 
 export function Footer() {
-  const year = new Date().getFullYear();
-
   const links = {
     Services: [
       { href: "#services", label: "Brand Identity" },
       { href: "#services", label: "Digital Marketing" },
-      { href: "#services", label: "Web Design & Dev" },
-      { href: "#", label: "Content Strategy" },
     ],
     Company: [
       { href: "#", label: "About Us" },
       { href: "#", label: "Careers" },
       { href: "#clients", label: "Blog" },
       { href: "#contact", label: "Contact" },
-    ],
-    Work: [
-      { href: "#portfolio", label: "Our Work" },
-      { href: "#testimonials", label: "Testimonials" },
-      { href: "#", label: "Case Studies" },
-    ],
-    Legal: [
-      { href: "#", label: "Privacy Policy" },
-      { href: "#", label: "Terms of Service" },
-      { href: "#", label: "Cookie Policy" },
     ],
   };
 
@@ -58,7 +44,7 @@ export function Footer() {
               Creative marketing and design solutions to help your brand grow.
             </p>
           </div>
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-2 gap-8">
             {Object.entries(links).map(([title, linkList]) => (
                 <div key={title} className="grid gap-2">
                     <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground/80">{title}</h3>
@@ -75,10 +61,7 @@ export function Footer() {
             ))}
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row">
-          <p className="text-sm text-muted-foreground">
-            © {year} Plus Marketing. All rights reserved.
-          </p>
+        <div className="mt-12 flex flex-col items-center justify-center gap-6 border-t border-white/10 pt-8 sm:flex-row">
           <div className="flex items-center gap-2">
             {socialLinks.map(social => (
                 <Button key={social.label} variant="ghost" size="icon" asChild>
