@@ -10,9 +10,9 @@ export function Footer() {
       { href: "#services", label: "Digital Marketing" },
     ],
     Company: [
-      { href: "#", label: "About Us" },
+      { href: "#about", label: "About Us" },
       { href: "#", label: "Careers" },
-      { href: "#clients", label: "Blog" },
+      { href: "#", label: "Blog" },
       { href: "#contact", label: "Contact" },
     ],
   };

@@ -4,6 +4,7 @@ import { Services } from "@/components/landing/services";
 import { Testimonials } from "@/components/landing/testimonials";
 import { Contact } from "@/components/landing/contact";
 import { Footer } from "@/components/landing/footer";
+import { About } from "@/components/landing/about";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <About />
         <Services />
         <Testimonials />
         <Contact />
