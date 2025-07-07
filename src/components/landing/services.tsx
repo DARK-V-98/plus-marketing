@@ -13,11 +13,6 @@ export function Services() {
       title: "Digital Marketing",
       description: "Engaging your audience through targeted campaigns across all digital channels.",
     },
-    {
-      icon: <LayoutTemplate className="h-8 w-8 text-primary" />,
-      title: "Web Design & Dev",
-      description: "Building beautiful, responsive, and high-performing websites that convert.",
-    },
   ];
 
   return (
@@ -32,7 +27,7 @@ export function Services() {
             </p>
           </div>
         </div>
-        <div className="mx-auto mt-12 grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-2">
           {features.map((feature) => (
             <Card key={feature.title} className="bg-white/5 border-white/10 transform transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:shadow-xl text-left p-4">
               <CardHeader className="p-2">
