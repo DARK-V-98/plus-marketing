@@ -7,16 +7,16 @@ export function About() {
         <div className="space-y-4 text-center lg:text-left">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Us</h2>
           <p className="font-bold uppercase tracking-wider text-primary">
-            Welcome to our Digital Marketing Hub!
+            Your Strategic Marketing Partner
           </p>
           <p className="text-foreground/70 md:text-lg/relaxed">
-            We are a results-driven digital marketing team dedicated to helping businesses grow online through powerful and creative strategies. From social media management and content creation to SEO, Facebook Ads, and Google Ads—we do it all. Our mission is simple: to connect your brand with the right audience and turn clicks into loyal customers.
+            We are a team of passionate marketers and creative thinkers dedicated to one thing: driving growth for your business. In today's digital landscape, a strong online presence is non-negotiable. We specialize in creating multi-channel marketing strategies that not only reach but also resonate with your target audience.
           </p>
           <p className="text-foreground/70 md:text-lg/relaxed">
-            With a passion for innovation and a deep understanding of digital trends, we offer personalized solutions that deliver measurable success. Whether you're a startup or an established brand, we’re here to elevate your online presence and drive real results.
+            Our expertise spans the full marketing spectrum, from search engine optimization (SEO) and pay-per-click (PPC) advertising to engaging social media campaigns and compelling content marketing. We believe in a data-first approach, using analytics to inform our strategies and ensure every campaign is optimized for maximum return on investment.
           </p>
           <p className="text-foreground/70 md:text-lg/relaxed">
-            Let’s grow your business—digitally, strategically, and successfully.
+            Partner with us to transform your digital presence, build lasting customer relationships, and achieve sustainable growth.
           </p>
         </div>
         <div className="flex justify-center">

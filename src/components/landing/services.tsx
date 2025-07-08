@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { PenTool, Megaphone, LayoutTemplate } from "lucide-react";
+import { PenTool, TrendingUp, Target, Share2, FileText, Mail } from "lucide-react";
 
 export function Services() {
   const features = [
@@ -9,9 +9,29 @@ export function Services() {
       description: "Crafting unique visual identities that tell your brand's story and resonate with your audience.",
     },
     {
-      icon: <Megaphone className="h-8 w-8 text-primary" />,
-      title: "Digital Marketing",
-      description: "Engaging your audience through targeted campaigns across all digital channels.",
+      icon: <TrendingUp className="h-8 w-8 text-primary" />,
+      title: "Search Engine Optimization (SEO)",
+      description: "Increase your visibility on search engines and attract organic traffic with our proven SEO strategies.",
+    },
+    {
+        icon: <Target className="h-8 w-8 text-primary" />,
+        title: "Paid Advertising (PPC)",
+        description: "Get immediate, targeted traffic with expertly managed Google Ads and social media advertising campaigns.",
+    },
+    {
+        icon: <Share2 className="h-8 w-8 text-primary" />,
+        title: "Social Media Marketing",
+        description: "Build a thriving online community and engage your customers across platforms like Instagram, Facebook, and more.",
+    },
+    {
+        icon: <FileText className="h-8 w-8 text-primary" />,
+        title: "Content Marketing",
+        description: "Fuel your brand with high-quality content that educates, entertains, and converts.",
+    },
+    {
+        icon: <Mail className="h-8 w-8 text-primary" />,
+        title: "Email Marketing",
+        description: "Nurture leads and build customer loyalty with personalized email campaigns that deliver value.",
     },
   ];
 
@@ -27,7 +47,7 @@ export function Services() {
             </p>
           </div>
         </div>
-        <div className="mx-auto mt-12 grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-6xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3">
           {features.map((feature) => (
             <Card key={feature.title} className="bg-white/5 border-white/10 transform transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:shadow-xl text-left p-4">
               <CardHeader className="p-2">

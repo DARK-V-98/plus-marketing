@@ -11,13 +11,13 @@ export function Hero() {
             <div className="space-y-4">
               <p className="font-bold uppercase tracking-wider text-primary">Creative Digital Agency</p>
               <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl/none">
-                We Build Brands That Stand Out.
+                Marketing That Drives Growth.
               </h1>
               <h2 className="text-2xl font-medium text-foreground/80 sm:text-3xl">
-                Stunning Design & Marketing That Drives Results.
+                Data-Driven Strategies & Creative Campaigns.
               </h2>
               <p className="max-w-[600px] text-foreground/70 md:text-lg">
-                We blend creativity with strategy to build unforgettable brand experiences. From concept to campaign, we're your partners in growth.
+                We are a full-service digital marketing agency dedicated to helping you connect with your audience. From SEO and PPC to social media and content creation, we craft strategies that deliver real, measurable results.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">

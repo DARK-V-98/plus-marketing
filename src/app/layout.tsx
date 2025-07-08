@@ -13,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Plus Marketing | Creative Marketing & Design Solutions",
   description:
-    "Plus Marketing helps brands grow with creative marketing strategies and stunning design. We build memorable experiences that drive results.",
+    "Supercharge your growth with Plus Marketing. We specialize in data-driven digital marketing and creative design solutions, including SEO, PPC, social media, content strategy, and branding to elevate your online presence and deliver measurable results.",
 };
 
 export default function RootLayout({
