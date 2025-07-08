@@ -7,6 +7,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Twitter } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import { cn } from "@/lib/utils";
 
 interface Testimonial {
   id: string;
@@ -21,6 +23,7 @@ interface Testimonial {
 export function Testimonials() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [loading, setLoading] = useState(true);
+  const [ref, isIntersecting] = useIntersectionObserver({ threshold: 0.1 });
 
   useEffect(() => {
     const q = query(collection(db, 'testimonials'), orderBy('createdAt', 'desc'));
@@ -40,9 +43,14 @@ export function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in slide-in-from-bottom-12 duration-500">
+        <div className={cn(
+            "flex flex-col items-center justify-center space-y-4 text-center",
+            isIntersecting
+              ? "animate-in fade-in slide-in-from-bottom-12 duration-500"
+              : "opacity-0"
+          )}>
           <div className="space-y-2">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
             <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -67,7 +75,12 @@ export function Testimonials() {
             <p className="col-span-full text-center text-foreground/70">Be the first to leave a review!</p>
           )}
           {!loading && testimonials.map((testimonial, index) => (
-              <Card key={testimonial.id} style={{ animationDelay: `${index * 150}ms` }} className="animate-in fade-in zoom-in-95 rounded-2xl flex flex-col justify-between transition-all hover:shadow-xl hover:scale-105">
+              <Card key={testimonial.id} style={{ animationDelay: `${index * 150}ms` }} className={cn(
+                  "rounded-2xl flex flex-col justify-between transition-all hover:shadow-xl hover:scale-105",
+                  isIntersecting
+                    ? "animate-in fade-in zoom-in-95"
+                    : "opacity-0"
+                )}>
                 <CardContent className="p-6">
                   <p className="text-foreground/80">"{testimonial.quote}"</p>
                 </CardContent>

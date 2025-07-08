@@ -1,13 +1,24 @@
+'use client';
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import { cn } from "@/lib/utils";
 
 export function Hero() {
+  const [ref, isIntersecting] = useIntersectionObserver({ threshold: 0.2 });
+
   return (
-    <section className="w-full py-24 md:py-32 lg:py-40">
+    <section className="w-full py-24 md:py-32 lg:py-40" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="flex flex-col justify-center space-y-6 animate-in fade-in slide-in-from-left-12 duration-500">
+          <div className={cn(
+            "flex flex-col justify-center space-y-6",
+            isIntersecting 
+              ? "animate-in fade-in slide-in-from-left-12 duration-500" 
+              : "opacity-0"
+          )}>
             <div className="space-y-4">
               <p className="font-bold uppercase tracking-wider text-primary">Creative Digital Agency</p>
               <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl/none">
@@ -32,7 +43,12 @@ export function Hero() {
               </Button>
             </div>
           </div>
-          <div className="flex items-center justify-center animate-in fade-in slide-in-from-right-12 duration-500">
+          <div className={cn(
+            "flex items-center justify-center",
+            isIntersecting
+              ? "animate-in fade-in slide-in-from-right-12 duration-500"
+              : "opacity-0"
+          )}>
             <Image
               src="https://placehold.co/600x500.png"
               width="600"

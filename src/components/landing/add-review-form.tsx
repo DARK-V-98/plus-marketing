@@ -8,6 +8,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
+import { cn } from '@/lib/utils';
 
 export function AddReviewForm() {
   const [name, setName] = useState('');
@@ -15,6 +17,7 @@ export function AddReviewForm() {
   const [quote, setQuote] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const [ref, isIntersecting] = useIntersectionObserver({ threshold: 0.2 });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,9 +60,14 @@ export function AddReviewForm() {
   };
 
   return (
-    <section id="add-review" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="add-review" className="w-full py-12 md:py-24 lg:py-32" ref={ref}>
         <div className="container mx-auto px-4 md:px-6">
-            <Card className="max-w-2xl mx-auto rounded-2xl animate-in fade-in zoom-in-95 duration-500">
+            <Card className={cn(
+              "max-w-2xl mx-auto rounded-2xl",
+              isIntersecting
+                ? "animate-in fade-in zoom-in-95 duration-500"
+                : "opacity-0"
+            )}>
                 <CardHeader>
                     <CardTitle className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-center">Leave a Review</CardTitle>
                     <CardDescription className="text-center text-foreground/70">

@@ -1,7 +1,13 @@
+'use client';
+
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { PenTool, TrendingUp, Target, Share2, FileText, Mail } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import { cn } from "@/lib/utils";
 
 export function Services() {
+  const [ref, isIntersecting] = useIntersectionObserver({ threshold: 0.1 });
+
   const features = [
     {
       icon: <PenTool className="h-8 w-8 text-primary" />,
@@ -36,9 +42,14 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="services" className="w-full py-12 md:py-24 lg:py-32" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in slide-in-from-bottom-12 duration-500">
+        <div className={cn(
+            "flex flex-col items-center justify-center space-y-4 text-center",
+            isIntersecting
+              ? "animate-in fade-in slide-in-from-bottom-12 duration-500"
+              : "opacity-0"
+          )}>
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm uppercase">Our Services</div>
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What We Do</h2>
@@ -49,7 +60,12 @@ export function Services() {
         </div>
         <div className="mx-auto mt-12 grid max-w-6xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3">
           {features.map((feature, index) => (
-            <Card key={feature.title} style={{ animationDelay: `${index * 150}ms` }} className="animate-in fade-in zoom-in-95 p-4 text-left rounded-2xl transform transition-all duration-300 hover:scale-105 hover:bg-accent hover:shadow-xl">
+            <Card key={feature.title} style={{ animationDelay: `${index * 150}ms` }} className={cn(
+              "p-4 text-left rounded-2xl transform transition-all duration-300 hover:scale-105 hover:bg-accent hover:shadow-xl",
+              isIntersecting
+                ? "animate-in fade-in zoom-in-95"
+                : "opacity-0"
+              )}>
               <CardHeader className="p-2">
                   {feature.icon}
               </CardHeader>
