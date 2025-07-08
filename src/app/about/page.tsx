@@ -12,9 +12,9 @@ export default function AboutPage() {
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <div className="space-y-4">
                 <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                 Welcome to our Digital Marketing Hub!
+                 A Managing Director's Message
                 </h1>
-                <p className="text-primary font-semibold">ABOUT US</p>
+                <p className="text-primary font-semibold">A WORD FROM OUR LEADER</p>
                 <p className="text-foreground/70 md:text-lg/relaxed">
                   We are a results-driven digital marketing team dedicated to helping businesses grow online through powerful and creative strategies. From social media management and content creation to SEO, Facebook Ads, and Google Ads—we do it all. Our mission is simple: to connect your brand with the right audience and turn clicks into loyal customers.
                 </p>

@@ -11,8 +11,7 @@ export function Hero() {
   return (
     <section 
       className="w-full py-24 md:py-32 lg:py-40 bg-cover bg-center"
-      style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }}
-      data-ai-hint="geometric network"
+      style={{ backgroundImage: "url('/managing-director.jpeg')" }}
       ref={ref}
     >
       <div className="container mx-auto px-4 md:px-6">
