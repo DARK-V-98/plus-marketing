@@ -1,7 +1,7 @@
 'use client';
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Megaphone, BarChart3, Gauge, CodeXml } from "lucide-react";
+import { Megaphone, BarChart3, Gauge, CodeXml, Palette } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { cn } from "@/lib/utils";
 
@@ -29,6 +29,11 @@ export function Services() {
         title: "Website Development",
         description: "Creating responsive, high-performance websites that deliver exceptional user experiences.",
     },
+    {
+      icon: <Palette className="h-8 w-8 text-primary" />,
+      title: "Graphic Designing",
+      description: "Creating visually stunning designs that capture your brand's essence and message.",
+    },
   ];
 
   return (
@@ -43,7 +48,7 @@ export function Services() {
             Our comprehensive suite of services is designed to elevate your brand's digital footprint. We specialize in creating impactful strategies that drive engagement, generate leads, and deliver measurable results. From Social Media and SEO to paid campaigns, we cover all aspects of digital marketing to ensure your business thrives online.
           </p>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <Card 
               key={feature.title} 
