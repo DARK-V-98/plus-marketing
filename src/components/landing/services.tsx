@@ -1,7 +1,7 @@
 'use client';
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Megaphone, BarChart3, Gauge, CodeXml, Palette } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Megaphone, CodeXml, Palette } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { cn } from "@/lib/utils";
 
@@ -11,28 +11,18 @@ export function Services() {
   const features = [
     {
       icon: <Megaphone className="h-8 w-8 text-primary" />,
-      title: "Social Media Marketing",
-      description: "Harnessing social platforms to build brand presence and drive engagement.",
-    },
-    {
-      icon: <BarChart3 className="h-8 w-8 text-primary" />,
-      title: "Search Engine Marketing",
-      description: "Driving targeted traffic and generating leads through paid search campaigns.",
-    },
-    {
-        icon: <Gauge className="h-8 w-8 text-primary" />,
-        title: "Search Engine Optimization",
-        description: "Improving organic visibility and ranking on search engine result pages.",
-    },
-    {
-        icon: <CodeXml className="h-8 w-8 text-primary" />,
-        title: "Website Development",
-        description: "Creating responsive, high-performance websites that deliver exceptional user experiences.",
+      title: "Digital Marketing Services",
+      description: "Comprehensive strategies including SEO, SEM, and social media to boost your online presence.",
     },
     {
       icon: <Palette className="h-8 w-8 text-primary" />,
-      title: "Graphic Designing",
+      title: "Graphic Design",
       description: "Creating visually stunning designs that capture your brand's essence and message.",
+    },
+    {
+      icon: <CodeXml className="h-8 w-8 text-primary" />,
+      title: "Web Development",
+      description: "Creating responsive, high-performance websites that deliver exceptional user experiences.",
     },
   ];
 
@@ -43,9 +33,9 @@ export function Services() {
           "space-y-4",
           isIntersecting ? "animate-in fade-in slide-in-from-left-12 duration-500" : "opacity-0"
         )}>
-          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Get the perfect digital solution for your business with us.</h2>
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Our Core Services</h2>
           <p className="text-primary-foreground/80 md:text-xl/relaxed">
-            Our comprehensive suite of services is designed to elevate your brand's digital footprint. We specialize in creating impactful strategies that drive engagement, generate leads, and deliver measurable results. From Social Media and SEO to paid campaigns, we cover all aspects of digital marketing to ensure your business thrives online.
+            We offer a focused suite of services designed to deliver maximum impact: comprehensive digital marketing, stunning graphic design, and robust web development. We provide the essential tools to build and grow your brand online.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
