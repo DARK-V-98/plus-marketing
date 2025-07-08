@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Search } from "lucide-react";
@@ -23,9 +24,7 @@ export function Header() {
             className="flex items-center gap-2"
             prefetch={false}
           >
-            <span className="font-headline text-2xl font-bold text-foreground">
-              Plus Marketing
-            </span>
+            <Image src="/logo1.jpeg" alt="Plus Marketing Logo" width={150} height={40} className="object-contain" />
           </Link>
           <nav className="hidden items-center gap-6 lg:flex">
             {navLinks.map((link) => (
@@ -60,9 +59,7 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-background">
               <Link href="/" className="mr-6 flex items-center" prefetch={false}>
-                <span className="ml-2 font-headline text-lg font-semibold">
-                  Plus Marketing
-                </span>
+                <Image src="/logo1.jpeg" alt="Plus Marketing Logo" width={120} height={32} className="object-contain" />
               </Link>
               <div className="grid gap-2 py-6">
                 {navLinks.map((link) => (
