@@ -13,7 +13,7 @@ export function Footer() {
   ];
 
   return (
-    <footer id="footer" className="w-full border-t border-white/10 bg-background/30 py-12">
+    <footer id="footer" className="w-full border-t border-border bg-muted py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-center text-center">
           <div>
@@ -38,7 +38,7 @@ export function Footer() {
             </p>
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center justify-center gap-6 border-t border-white/10 pt-8 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-center gap-6 border-t border-border pt-8 sm:flex-row">
           <div className="flex items-center gap-2">
             {socialLinks.map(social => (
                 <Button key={social.label} variant="ghost" size="icon" asChild>

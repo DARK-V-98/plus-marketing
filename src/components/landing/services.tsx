@@ -38,7 +38,7 @@ export function Services() {
   return (
     <section id="services" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in slide-in-from-bottom-12 duration-500">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm uppercase">Our Services</div>
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What We Do</h2>
@@ -48,8 +48,8 @@ export function Services() {
           </div>
         </div>
         <div className="mx-auto mt-12 grid max-w-6xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3">
-          {features.map((feature) => (
-            <Card key={feature.title} className="bg-white/5 border-white/10 transform transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:shadow-xl text-left p-4">
+          {features.map((feature, index) => (
+            <Card key={feature.title} style={{ animationDelay: `${index * 150}ms` }} className="animate-in fade-in zoom-in-95 p-4 text-left rounded-2xl transform transition-all duration-300 hover:scale-105 hover:bg-accent hover:shadow-xl">
               <CardHeader className="p-2">
                   {feature.icon}
               </CardHeader>

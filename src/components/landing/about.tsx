@@ -4,7 +4,7 @@ export function About() {
   return (
     <section id="about" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto grid items-center justify-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-16">
-        <div className="space-y-4 text-center lg:text-left">
+        <div className="space-y-4 text-center lg:text-left animate-in fade-in slide-in-from-left-12 duration-500">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Us</h2>
           <p className="font-bold uppercase tracking-wider text-primary">
             Your Strategic Marketing Partner
@@ -19,7 +19,7 @@ export function About() {
             Partner with us to transform your digital presence, build lasting customer relationships, and achieve sustainable growth.
           </p>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center animate-in fade-in slide-in-from-right-12 duration-500">
             <Image
               src="/logo1.jpeg"
               width={400}

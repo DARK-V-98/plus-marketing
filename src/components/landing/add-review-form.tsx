@@ -59,7 +59,7 @@ export function AddReviewForm() {
   return (
     <section id="add-review" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
-            <Card className="max-w-2xl mx-auto bg-white/5 border-white/10">
+            <Card className="max-w-2xl mx-auto rounded-2xl animate-in fade-in zoom-in-95 duration-500">
                 <CardHeader>
                     <CardTitle className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-center">Leave a Review</CardTitle>
                     <CardDescription className="text-center text-foreground/70">
@@ -74,13 +74,11 @@ export function AddReviewForm() {
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 required
-                                className="bg-transparent"
                             />
                             <Input
                                 placeholder="Your Handle (e.g., twitter_user)"
                                 value={handle}
                                 onChange={(e) => setHandle(e.target.value)}
-                                className="bg-transparent"
                             />
                         </div>
                         <Textarea
@@ -89,7 +87,6 @@ export function AddReviewForm() {
                             onChange={(e) => setQuote(e.target.value)}
                             required
                             rows={4}
-                            className="bg-transparent"
                         />
                         <Button type="submit" disabled={isSubmitting} className="w-full">
                             {isSubmitting ? 'Submitting...' : 'Submit Review'}

@@ -42,7 +42,7 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in slide-in-from-bottom-12 duration-500">
           <div className="space-y-2">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
             <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -52,7 +52,7 @@ export function Testimonials() {
         </div>
         <div className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:grid-cols-3">
           {loading && Array.from({ length: 3 }).map((_, index) => (
-            <Card key={index} className="bg-white/5 border-white/10 flex flex-col justify-between p-6 space-y-4">
+            <Card key={index} className="rounded-2xl flex flex-col justify-between p-6 space-y-4">
               <Skeleton className="h-20 w-full" />
               <div className="flex items-center gap-4">
                 <Skeleton className="h-12 w-12 rounded-full" />
@@ -66,8 +66,8 @@ export function Testimonials() {
           {!loading && testimonials.length === 0 && (
             <p className="col-span-full text-center text-foreground/70">Be the first to leave a review!</p>
           )}
-          {!loading && testimonials.map((testimonial) => (
-              <Card key={testimonial.id} className="bg-white/5 border-white/10 flex flex-col justify-between">
+          {!loading && testimonials.map((testimonial, index) => (
+              <Card key={testimonial.id} style={{ animationDelay: `${index * 150}ms` }} className="animate-in fade-in zoom-in-95 rounded-2xl flex flex-col justify-between transition-all hover:shadow-xl hover:scale-105">
                 <CardContent className="p-6">
                   <p className="text-foreground/80">"{testimonial.quote}"</p>
                 </CardContent>

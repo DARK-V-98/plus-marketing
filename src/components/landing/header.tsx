@@ -17,7 +17,7 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background/30 backdrop-blur-lg">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-8">
           <Link
@@ -67,7 +67,7 @@ export function Header() {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-background/80 backdrop-blur-lg">
+            <SheetContent side="right" className="bg-background">
               <Link href="#" className="mr-6 flex items-center" prefetch={false}>
                 <Image
                   src="/logo1.jpeg"
