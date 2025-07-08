@@ -1,22 +1,9 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Twitter, Linkedin, Instagram, Github, Facebook } from "lucide-react";
-import { ShieldIcon } from "./icons";
+import Image from "next/image";
 
 export function Footer() {
-  const links = {
-    Services: [
-      { href: "#services", label: "Brand Identity" },
-      { href: "#services", label: "Digital Marketing" },
-    ],
-    Company: [
-      { href: "#about", label: "About Us" },
-      { href: "#", label: "Careers" },
-      { href: "#", label: "Blog" },
-      { href: "#contact", label: "Contact" },
-    ],
-  };
-
   const socialLinks = [
     { href: "#", icon: Twitter, label: "Twitter" },
     { href: "#", icon: Facebook, label: "Facebook" },
@@ -28,14 +15,20 @@ export function Footer() {
   return (
     <footer id="footer" className="w-full border-t border-white/10 bg-background/30 py-12">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-4">
+        <div className="flex justify-center text-center">
+          <div>
             <Link
               href="#"
-              className="mb-4 flex items-center gap-2"
+              className="mb-4 inline-flex items-center gap-2"
               prefetch={false}
             >
-              <ShieldIcon className="h-7 w-7 text-primary" />
+              <Image
+                src="/logo1.jpeg"
+                width={40}
+                height={40}
+                alt="Plus Marketing Logo"
+                className="rounded-full"
+              />
               <span className="font-headline text-xl font-bold text-foreground">
                 Plus Marketing
               </span>
@@ -43,22 +36,6 @@ export function Footer() {
             <p className="max-w-xs text-foreground/60">
               Creative marketing and design solutions to help your brand grow.
             </p>
-          </div>
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-2 gap-8">
-            {Object.entries(links).map(([title, linkList]) => (
-                <div key={title} className="grid gap-2">
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground/80">{title}</h3>
-                    <ul className="grid gap-2">
-                    {linkList.map(link => (
-                        <li key={link.label}>
-                            <Link href={link.href} className="text-sm text-foreground/60 hover:text-foreground">
-                                {link.label}
-                            </Link>
-                        </li>
-                    ))}
-                    </ul>
-                </div>
-            ))}
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-center gap-6 border-t border-white/10 pt-8 sm:flex-row">
