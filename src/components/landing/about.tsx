@@ -18,7 +18,7 @@ export function About() {
           <div className="space-y-4">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">About Us</h2>
             <p className="max-w-[900px] text-primary md:text-xl/relaxed font-semibold">
-              Welcome to our Digital Marketing Hub!
+              Welcome to Plus Marketing, your Digital Marketing Hub!
             </p>
             <p className="max-w-[900px] text-foreground/70 md:text-lg/relaxed">
               We are a results-driven digital marketing team dedicated to helping businesses grow online through powerful and creative strategies. From social media management and content creation to SEO, Facebook Ads, and Google Ads—we do it all. Our mission is simple: to connect your brand with the right audience and turn clicks into loyal customers.
