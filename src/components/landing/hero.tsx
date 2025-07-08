@@ -10,13 +10,12 @@ export function Hero() {
 
   return (
     <section 
-      className="w-full py-24 md:py-32 lg:py-40 bg-cover bg-center"
-      style={{ backgroundImage: "url('/managing-director.jpeg')" }}
+      className="w-full py-24 md:py-32 lg:py-40 bg-gray-100"
       ref={ref}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className={cn(
-          "flex flex-col items-center justify-center space-y-6 text-center text-white",
+          "flex flex-col items-center justify-center space-y-6 text-center text-foreground",
           isIntersecting 
             ? "animate-in fade-in zoom-in-95 duration-500" 
             : "opacity-0"
@@ -25,7 +24,7 @@ export function Hero() {
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl/none">
               Elevate Your Digital Presence
             </h1>
-            <p className="max-w-[700px] text-lg md:text-xl">
+            <p className="max-w-[700px] text-lg md:text-xl text-foreground/70">
               Plus Marketing is your dedicated partner for digital growth. We craft data-driven strategies to elevate your brand and connect with your audience.
             </p>
           </div>

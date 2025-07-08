@@ -21,7 +21,7 @@ export function About() {
           <p className="font-bold uppercase tracking-wider text-primary">
             A word from our leader
           </p>
-          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">A Managing Director's Message</h2>
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">A Message from Our CEO</h2>
           <p className="text-foreground/70 md:text-lg/relaxed">
             We are a results-driven digital marketing team dedicated to helping businesses grow online through powerful and creative strategies. From social media management and content creation to SEO, Facebook Ads, and Google Ads—we do it all. Our mission is simple: to connect your brand with the right audience and turn clicks into loyal customers.
           </p>

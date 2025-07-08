@@ -12,7 +12,7 @@ export default function AboutPage() {
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <div className="space-y-4">
                 <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                 A Managing Director's Message
+                 A Message from Our CEO
                 </h1>
                 <p className="text-primary font-semibold">A WORD FROM OUR LEADER</p>
                 <p className="text-foreground/70 md:text-lg/relaxed">
