@@ -1,13 +1,13 @@
 import { Header } from "@/components/landing/header";
 import { Footer } from "@/components/landing/footer";
-import { Services } from "@/components/landing/services";
+import { DetailedServices } from "@/components/landing/detailed-services";
 
 export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <Header />
       <main className="flex-1">
-        <Services />
+        <DetailedServices />
       </main>
       <Footer />
     </div>
