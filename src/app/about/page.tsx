@@ -1,15 +1,13 @@
 import { Header } from "@/components/landing/header";
-import { Hero } from "@/components/landing/hero";
-import { Contact } from "@/components/landing/contact";
 import { Footer } from "@/components/landing/footer";
+import { About } from "@/components/landing/about";
 
-export default function Home() {
+export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-[100dvh] bg-white">
       <Header />
       <main className="flex-1">
-        <Hero />
-        <Contact />
+        <About />
       </main>
       <Footer />
     </div>

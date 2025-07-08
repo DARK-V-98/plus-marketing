@@ -8,20 +8,20 @@ import Image from "next/image";
 
 export function Header() {
   const navLinks = [
-    { href: "#about", label: "About Us" },
-    { href: "#services", label: "Services" },
-    { href: "#testimonials", label: "Testimonials" },
-    { href: "#", label: "Blog" },
-    { href: "#", label: "Careers" },
-    { href: "#contact", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/services", label: "Services" },
+    { href: "/clients", label: "Success Clients" },
+    { href: "/blog", label: "Blog" },
+    { href: "/#contact", label: "Contact" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-white/95">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-8">
           <Link
-            href="#"
+            href="/"
             className="flex items-center gap-2"
             prefetch={false}
           >
@@ -52,7 +52,7 @@ export function Header() {
         
         <div className="hidden items-center gap-4 md:flex">
             <Button asChild>
-                <Link href="#contact">Get a Quote</Link>
+                <Link href="/#contact">Get a Quote</Link>
             </Button>
             <Button variant="ghost" size="icon">
                 <User className="h-5 w-5" />
@@ -68,7 +68,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-background">
-              <Link href="#" className="mr-6 flex items-center" prefetch={false}>
+              <Link href="/" className="mr-6 flex items-center" prefetch={false}>
                 <Image
                   src="/logo1.jpeg"
                   width={32}
