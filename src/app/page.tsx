@@ -6,6 +6,7 @@ import { Testimonials } from "@/components/landing/testimonials";
 import { Portfolio } from "@/components/landing/portfolio";
 import { Contact } from "@/components/landing/contact";
 import { Footer } from "@/components/landing/footer";
+import { OwnerMessage } from "@/components/landing/owner-message";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <Services />
         <About />
+        <OwnerMessage />
         <Testimonials />
         <Portfolio />
         <Contact />
