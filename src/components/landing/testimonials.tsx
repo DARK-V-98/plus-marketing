@@ -1,34 +1,43 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Twitter } from "lucide-react";
+'use client';
+
+import { useState, useEffect } from 'react';
+import { db } from '@/lib/firebase';
+import { collection, query, onSnapshot, orderBy } from 'firebase/firestore';
+import { Card, CardContent } from '@/components/ui/card';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Twitter } from 'lucide-react';
+import { Skeleton } from '@/components/ui/skeleton';
+
+interface Testimonial {
+  id: string;
+  name: string;
+  handle: string;
+  quote: string;
+  avatar: string;
+  image: string;
+  aiHint: string;
+}
 
 export function Testimonials() {
-  const testimonials = [
-    {
-      name: "Sarah L.",
-      handle: "@sarah_innovates",
-      quote: "Plus Marketing completely revitalized our brand. The new design is stunning and our engagement has skyrocketed. Truly a game-changing partnership.",
-      avatar: "SL",
-      image: "https://placehold.co/100x100.png",
-      aiHint: "professional woman"
-    },
-    {
-      name: "Michael B.",
-      handle: "@mike_builds",
-      quote: "As a startup founder, I needed a team that could handle everything from branding to our go-to-market strategy. Plus Marketing delivered beyond my expectations.",
-      avatar: "MB",
-      image: "https://placehold.co/100x100.png",
-      aiHint: "smiling man"
-    },
-    {
-      name: "Jessica P.",
-      handle: "@jess_secures",
-      quote: "The website they built for us is not only beautiful but also incredibly effective at converting visitors. Our online sales have never been better. Highly recommend!",
-      avatar: "JP",
-      image: "https://placehold.co/100x100.png",
-      aiHint: "woman outdoors"
-    },
-  ];
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const q = query(collection(db, 'testimonials'), orderBy('createdAt', 'desc'));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const testimonialsData: Testimonial[] = [];
+      querySnapshot.forEach((doc) => {
+        testimonialsData.push({ id: doc.id, ...doc.data() } as Testimonial);
+      });
+      setTestimonials(testimonialsData);
+      setLoading(false);
+    }, (error) => {
+        console.error("Error fetching testimonials: ", error);
+        setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   return (
     <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
@@ -42,8 +51,23 @@ export function Testimonials() {
           </div>
         </div>
         <div className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white/5 border-white/10 flex flex-col justify-between">
+          {loading && Array.from({ length: 3 }).map((_, index) => (
+            <Card key={index} className="bg-white/5 border-white/10 flex flex-col justify-between p-6 space-y-4">
+              <Skeleton className="h-20 w-full" />
+              <div className="flex items-center gap-4">
+                <Skeleton className="h-12 w-12 rounded-full" />
+                <div className="space-y-2">
+                  <Skeleton className="h-4 w-24" />
+                  <Skeleton className="h-4 w-16" />
+                </div>
+              </div>
+            </Card>
+          ))}
+          {!loading && testimonials.length === 0 && (
+            <p className="col-span-full text-center text-foreground/70">Be the first to leave a review!</p>
+          )}
+          {!loading && testimonials.map((testimonial) => (
+              <Card key={testimonial.id} className="bg-white/5 border-white/10 flex flex-col justify-between">
                 <CardContent className="p-6">
                   <p className="text-foreground/80">"{testimonial.quote}"</p>
                 </CardContent>
@@ -58,7 +82,7 @@ export function Testimonials() {
                           <p className="text-sm text-muted-foreground">{testimonial.handle}</p>
                         </div>
                     </div>
-                    <Twitter className="h-5 w-5 text-sky-400" />
+                    {testimonial.handle && <Twitter className="h-5 w-5 text-sky-400" />}
                 </div>
               </Card>
             ))}

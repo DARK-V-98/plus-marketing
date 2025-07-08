@@ -5,6 +5,7 @@ import { Testimonials } from "@/components/landing/testimonials";
 import { Contact } from "@/components/landing/contact";
 import { Footer } from "@/components/landing/footer";
 import { About } from "@/components/landing/about";
+import { AddReviewForm } from "@/components/landing/add-review-form";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <About />
         <Services />
         <Testimonials />
+        <AddReviewForm />
         <Contact />
       </main>
       <Footer />
