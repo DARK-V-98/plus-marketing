@@ -24,7 +24,7 @@ export function Header() {
             className="flex items-center gap-2"
             prefetch={false}
           >
-            <Image src="/logo1.jpeg" alt="Plus Marketing Logo" width={150} height={40} className="object-contain" />
+            <Image src="/logo1.jpeg" alt="Plus Marketing Logo" width={40} height={40} className="rounded-full object-cover" />
           </Link>
           <nav className="hidden items-center gap-6 lg:flex">
             {navLinks.map((link) => (
@@ -59,7 +59,7 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-background">
               <Link href="/" className="mr-6 flex items-center" prefetch={false}>
-                <Image src="/logo1.jpeg" alt="Plus Marketing Logo" width={120} height={32} className="object-contain" />
+                <Image src="/logo1.jpeg" alt="Plus Marketing Logo" width={40} height={40} className="rounded-full object-cover" />
               </Link>
               <div className="grid gap-2 py-6">
                 {navLinks.map((link) => (
