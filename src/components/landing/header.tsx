@@ -9,7 +9,6 @@ import { Menu, Search } from "lucide-react";
 export function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
     { href: "/clients", label: "Success Clients" },
     { href: "/blog", label: "Blog" },
