@@ -60,10 +60,10 @@ export function AddReviewForm() {
   };
 
   return (
-    <section id="add-review" className="w-full py-12 md:py-24 lg:py-32" ref={ref}>
+    <section id="add-review" className="w-full py-12 md:py-24 lg:py-32 bg-slate-50" ref={ref}>
         <div className="container mx-auto px-4 md:px-6">
             <Card className={cn(
-              "max-w-2xl mx-auto rounded-2xl",
+              "max-w-2xl mx-auto",
               isIntersecting
                 ? "animate-in fade-in zoom-in-95 duration-500"
                 : "opacity-0"

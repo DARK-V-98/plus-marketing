@@ -11,9 +11,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Plus Marketing | Creative Marketing & Design Solutions",
+  title: "Vise Global | Grow in Global",
   description:
-    "Supercharge your growth with Plus Marketing. We specialize in data-driven digital marketing and creative design solutions, including SEO, PPC, social media, content strategy, and branding to elevate your online presence and deliver measurable results.",
+    "Vise Global is your trusted digital marketing and web design partner. We help you grow your business globally with our data-driven strategies.",
 };
 
 export default function RootLayout({

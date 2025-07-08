@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { cn } from "@/lib/utils";
 
@@ -10,53 +9,37 @@ export function Hero() {
   const [ref, isIntersecting] = useIntersectionObserver({ threshold: 0.2 });
 
   return (
-    <section className="w-full py-24 md:py-32 lg:py-40" ref={ref}>
+    <section 
+      className="w-full py-24 md:py-32 lg:py-40 bg-cover bg-center"
+      style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }}
+      data-ai-hint="geometric network"
+      ref={ref}
+    >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className={cn(
-            "flex flex-col justify-center space-y-6",
-            isIntersecting 
-              ? "animate-in fade-in slide-in-from-left-12 duration-500" 
-              : "opacity-0"
-          )}>
-            <div className="space-y-4">
-              <p className="font-bold uppercase tracking-wider text-primary">Creative Digital Agency</p>
-              <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl/none">
-                Marketing That Drives Growth.
-              </h1>
-              <h2 className="text-2xl font-medium text-foreground/80 sm:text-3xl">
-                Data-Driven Strategies & Creative Campaigns.
-              </h2>
-              <p className="max-w-[600px] text-foreground/70 md:text-lg">
-                We are a full-service digital marketing agency dedicated to helping you connect with your audience. From SEO and PPC to social media and content creation, we craft strategies that deliver real, measurable results.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button
-                asChild
-                size="lg"
-                className="transition-transform hover:scale-105"
-              >
-                <Link href="#contact" prefetch={false}>
-                  Get Started
-                </Link>
-              </Button>
-            </div>
+        <div className={cn(
+          "flex flex-col items-center justify-center space-y-6 text-center text-white",
+          isIntersecting 
+            ? "animate-in fade-in zoom-in-95 duration-500" 
+            : "opacity-0"
+        )}>
+          <div className="space-y-4">
+            <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl/none">
+              Grow in Global
+            </h1>
+            <p className="max-w-[700px] text-lg md:text-xl">
+              Vise Global is your trusted digital marketing and web design partner. We help you grow your business globally with our data-driven strategies.
+            </p>
           </div>
-          <div className={cn(
-            "flex items-center justify-center",
-            isIntersecting
-              ? "animate-in fade-in slide-in-from-right-12 duration-500"
-              : "opacity-0"
-          )}>
-            <Image
-              src="https://placehold.co/600x500.png"
-              width="600"
-              height="500"
-              alt="Hero Image"
-              data-ai-hint="abstract design marketing"
-              className="mx-auto overflow-hidden rounded-xl object-contain"
-            />
+          <div className="flex flex-col gap-2 min-[400px]:flex-row">
+            <Button
+              asChild
+              size="lg"
+              className="transition-transform hover:scale-105"
+            >
+              <Link href="#contact" prefetch={false}>
+                Get Started
+              </Link>
+            </Button>
           </div>
         </div>
       </div>

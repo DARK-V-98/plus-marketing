@@ -3,21 +3,19 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, User } from "lucide-react";
-import Image from "next/image";
+import { Menu, Search } from "lucide-react";
 
 export function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
+    { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
     { href: "/clients", label: "Success Clients" },
     { href: "/blog", label: "Blog" },
-    { href: "/#contact", label: "Contact" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-white/95">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-8">
           <Link
@@ -25,15 +23,8 @@ export function Header() {
             className="flex items-center gap-2"
             prefetch={false}
           >
-            <Image
-              src="/logo1.jpeg"
-              width={40}
-              height={40}
-              alt="Plus Marketing Logo"
-              className="rounded-full"
-            />
-            <span className="font-headline text-xl font-bold text-foreground">
-              Plus Marketing
+            <span className="font-headline text-2xl font-bold text-foreground">
+              Vise Global
             </span>
           </Link>
           <nav className="hidden items-center gap-6 lg:flex">
@@ -50,13 +41,13 @@ export function Header() {
           </nav>
         </div>
         
-        <div className="hidden items-center gap-4 md:flex">
-            <Button asChild>
-                <Link href="/#contact">Get a Quote</Link>
-            </Button>
+        <div className="hidden items-center gap-2 md:flex">
             <Button variant="ghost" size="icon">
-                <User className="h-5 w-5" />
-                <span className="sr-only">User Profile</span>
+                <Search className="h-5 w-5" />
+                <span className="sr-only">Search</span>
+            </Button>
+            <Button asChild>
+                <Link href="/#contact">Contact us</Link>
             </Button>
         </div>
 
@@ -69,15 +60,8 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-background">
               <Link href="/" className="mr-6 flex items-center" prefetch={false}>
-                <Image
-                  src="/logo1.jpeg"
-                  width={32}
-                  height={32}
-                  alt="Plus Marketing Logo"
-                  className="rounded-full"
-                />
                 <span className="ml-2 font-headline text-lg font-semibold">
-                  Plus Marketing
+                  Vise Global
                 </span>
               </Link>
               <div className="grid gap-2 py-6">
@@ -91,6 +75,15 @@ export function Header() {
                     {link.label}
                   </Link>
                 ))}
+              </div>
+              <div className="mt-4 flex flex-col gap-4">
+                 <Button variant="ghost">
+                    <Search className="h-5 w-5 mr-2" />
+                    Search
+                </Button>
+                <Button asChild>
+                    <Link href="/#contact">Contact us</Link>
+                </Button>
               </div>
             </SheetContent>
           </Sheet>

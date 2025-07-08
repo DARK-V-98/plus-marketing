@@ -4,7 +4,7 @@ import { Newspaper } from "lucide-react";
 
 export default function BlogPage() {
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-white">
+    <div className="flex flex-col min-h-[100dvh]">
       <Header />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
@@ -13,7 +13,7 @@ export default function BlogPage() {
                     <Newspaper className="h-16 w-16 text-primary" />
                     <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Our Blog</h1>
                     <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Exciting content is coming soon. Stay tuned for insights, tips, and updates from our team!
+                        Insights and stories from the world of digital marketing. Coming Soon!
                     </p>
                 </div>
             </div>

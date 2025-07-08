@@ -4,7 +4,7 @@ import { Services } from "@/components/landing/services";
 
 export default function ServicesPage() {
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-white">
+    <div className="flex flex-col min-h-[100dvh]">
       <Header />
       <main className="flex-1">
         <Services />

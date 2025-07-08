@@ -5,7 +5,7 @@ import { AddReviewForm } from "@/components/landing/add-review-form";
 
 export default function ClientsPage() {
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-white">
+    <div className="flex flex-col min-h-[100dvh]">
       <Header />
       <main className="flex-1">
         <Testimonials />

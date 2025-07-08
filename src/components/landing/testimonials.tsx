@@ -5,10 +5,12 @@ import { db } from '@/lib/firebase';
 import { collection, query, onSnapshot, orderBy } from 'firebase/firestore';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Twitter } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { cn } from "@/lib/utils";
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 interface Testimonial {
   id: string;
@@ -32,7 +34,7 @@ export function Testimonials() {
       querySnapshot.forEach((doc) => {
         testimonialsData.push({ id: doc.id, ...doc.data() } as Testimonial);
       });
-      setTestimonials(testimonialsData);
+      setTestimonials(testimonialsData.slice(0, 4)); // Show only 4 testimonials on homepage
       setLoading(false);
     }, (error) => {
         console.error("Error fetching testimonials: ", error);
@@ -52,14 +54,11 @@ export function Testimonials() {
               : "opacity-0"
           )}>
           <div className="space-y-2">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
-            <p className="max-w-[900px] text-foreground/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Don't just take our word for it. Here's what our partners have to say.
-            </p>
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Take A Look At What Our Clients Say About Our Work.</h2>
           </div>
         </div>
-        <div className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:grid-cols-3">
-          {loading && Array.from({ length: 3 }).map((_, index) => (
+        <div className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:grid-cols-4">
+          {loading && Array.from({ length: 4 }).map((_, index) => (
             <Card key={index} className="rounded-2xl flex flex-col justify-between p-6 space-y-4">
               <Skeleton className="h-20 w-full" />
               <div className="flex items-center gap-4">
@@ -76,29 +75,36 @@ export function Testimonials() {
           )}
           {!loading && testimonials.map((testimonial, index) => (
               <Card key={testimonial.id} style={{ animationDelay: `${index * 150}ms` }} className={cn(
-                  "rounded-2xl flex flex-col justify-between transition-all hover:shadow-xl hover:scale-105",
+                  "rounded-2xl flex flex-col items-center text-center justify-between transition-all hover:shadow-xl hover:scale-105",
                   isIntersecting
                     ? "animate-in fade-in zoom-in-95"
                     : "opacity-0"
                 )}>
-                <CardContent className="p-6">
+                <CardContent className="p-6 space-y-4">
                   <p className="text-foreground/80">"{testimonial.quote}"</p>
+                  <div className="flex justify-center gap-1">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
                 </CardContent>
-                <div className="flex items-center justify-between p-6 pt-0">
-                    <div className="flex items-center gap-4">
-                        <Avatar>
-                          <AvatarImage src={testimonial.image} alt={testimonial.name} data-ai-hint={testimonial.aiHint} />
-                          <AvatarFallback>{testimonial.avatar}</AvatarFallback>
-                        </Avatar>
-                        <div>
-                          <p className="font-semibold">{testimonial.name}</p>
-                          <p className="text-sm text-muted-foreground">{testimonial.handle}</p>
-                        </div>
+                <div className="flex flex-col items-center gap-2 p-6 pt-0">
+                    <Avatar className="h-16 w-16">
+                      <AvatarImage src={testimonial.image} alt={testimonial.name} data-ai-hint={testimonial.aiHint} />
+                      <AvatarFallback>{testimonial.avatar}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.handle}</p>
                     </div>
-                    {testimonial.handle && <Twitter className="h-5 w-5 text-sky-400" />}
                 </div>
               </Card>
             ))}
+        </div>
+        <div className="flex justify-center mt-12">
+            <Button asChild>
+                <Link href="/clients">View More</Link>
+            </Button>
         </div>
       </div>
     </section>
