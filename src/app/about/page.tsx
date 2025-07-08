@@ -12,17 +12,17 @@ export default function AboutPage() {
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <div className="space-y-4">
                 <h1 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Vise Global - Your Trusted Digital Marketing And Web Design Company In Sri Lanka.
+                 Welcome to our Digital Marketing Hub!
                 </h1>
                 <p className="text-primary font-semibold">ABOUT US</p>
                 <p className="text-foreground/70 md:text-lg/relaxed">
-                  We are a team of passionate marketers, designers, and developers dedicated to helping businesses thrive in the digital world. Our journey began with a simple mission: to provide transparent, results-oriented digital marketing and web solutions that empower our clients to achieve their goals.
+                  We are a results-driven digital marketing team dedicated to helping businesses grow online through powerful and creative strategies. From social media management and content creation to SEO, Facebook Ads, and Google Ads—we do it all. Our mission is simple: to connect your brand with the right audience and turn clicks into loyal customers.
                 </p>
                 <p className="text-foreground/70 md:text-lg/relaxed">
-                  In today's fast-paced digital landscape, a strong online presence is not just an advantage; it's a necessity. We specialize in crafting bespoke strategies that are tailored to the unique needs of each client. From small startups to large enterprises, we believe every business deserves a digital strategy that delivers real, measurable results. Our commitment to excellence and innovation has made us a trusted partner for businesses across Sri Lanka and beyond.
+                 With a passion for innovation and a deep understanding of digital trends, we offer personalized solutions that deliver measurable success. Whether you're a startup or an established brand, we’re here to elevate your online presence and drive real results.
                 </p>
                  <p className="text-foreground/70 md:text-lg/relaxed">
-                  Our core values are collaboration, integrity, and a relentless focus on our clients' success. We work closely with you to understand your vision and challenges, becoming an extension of your team to drive growth and build lasting success together.
+                  Let’s grow your business—digitally, strategically, and successfully.
                 </p>
               </div>
               <div className="flex flex-col gap-8">

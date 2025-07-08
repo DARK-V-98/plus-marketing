@@ -48,7 +48,7 @@ export function Footer() {
              <div className="space-y-4">
                  <h4 className="font-semibold uppercase">Say Hello</h4>
                  <div className="text-gray-400 space-y-2">
-                    <p>hello@viseglobal.com</p>
+                    <p>hello@plusmarketing.com</p>
                     <p>+94 11 234 5678</p>
                  </div>
             </div>
@@ -67,7 +67,7 @@ export function Footer() {
             </div>
         </div>
         <div className="mt-12 border-t border-gray-800 pt-8 text-center text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Vise Global. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Plus Marketing. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

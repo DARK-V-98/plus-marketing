@@ -24,10 +24,10 @@ export function Hero() {
         )}>
           <div className="space-y-4">
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl/none">
-              Grow in Global
+              Elevate Your Digital Presence
             </h1>
             <p className="max-w-[700px] text-lg md:text-xl">
-              Vise Global is your trusted digital marketing and web design partner. We help you grow your business globally with our data-driven strategies.
+              Plus Marketing is your dedicated partner for digital growth. We craft data-driven strategies to elevate your brand and connect with your audience.
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">

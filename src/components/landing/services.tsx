@@ -40,7 +40,7 @@ export function Services() {
         )}>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Get the perfect digital solution for your business with us.</h2>
           <p className="text-primary-foreground/80 md:text-xl/relaxed">
-            We are a team of passionate marketers, designers, and developers dedicated to helping businesses thrive in the digital world. Our journey began with a simple mission: to provide transparent, results-oriented digital marketing and web solutions that empower our clients to achieve their goals. In today's fast-paced digital landscape, a strong online presence is not just an advantage; it's a necessity. We specialize in crafting bespoke strategies that are tailored to the unique needs of each client.
+            Our comprehensive suite of services is designed to elevate your brand's digital footprint. We specialize in creating impactful strategies that drive engagement, generate leads, and deliver measurable results. From Social Media and SEO to paid campaigns, we cover all aspects of digital marketing to ensure your business thrives online.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2">

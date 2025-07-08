@@ -24,7 +24,7 @@ export function Header() {
             prefetch={false}
           >
             <span className="font-headline text-2xl font-bold text-foreground">
-              Vise Global
+              Plus Marketing
             </span>
           </Link>
           <nav className="hidden items-center gap-6 lg:flex">
@@ -61,7 +61,7 @@ export function Header() {
             <SheetContent side="right" className="bg-background">
               <Link href="/" className="mr-6 flex items-center" prefetch={false}>
                 <span className="ml-2 font-headline text-lg font-semibold">
-                  Vise Global
+                  Plus Marketing
                 </span>
               </Link>
               <div className="grid gap-2 py-6">
