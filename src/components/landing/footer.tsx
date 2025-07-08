@@ -48,8 +48,8 @@ export function Footer() {
              <div className="space-y-4">
                  <h4 className="font-semibold uppercase">Say Hello</h4>
                  <div className="text-gray-400 space-y-2">
-                    <p>hello@plusmarketing.com</p>
-                    <p>+94 11 234 5678</p>
+                    <p>plusmarketing1995@gmail.com</p>
+                    <p>+94 72 567 0349</p>
                  </div>
             </div>
              {/* Column 4: Links */}
