@@ -17,8 +17,7 @@ export function OwnerMessage() {
               : "opacity-0"
           )}>
           <Image
-            src="https://placehold.co/400x400.png"
-            data-ai-hint="man portrait"
+            src="/ow.jpeg"
             alt="Ashen Gamage"
             width={400}
             height={400}
